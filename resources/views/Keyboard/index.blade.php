@@ -8,7 +8,9 @@
 </head>
 <body>
     <h1>Keyboard Of Truth</h1>
-    <div id="keyboard" class="center"></div>
+    <div id="container" class="container">
+    <div id="bulk" class="bulk"></div>
+    <div id="keyboard" class="center">
     <script>
         // Initialize Tone.js
         Tone.start();
@@ -44,7 +46,7 @@
 
         // Create audio element from note and instrument value
         function playSound(note, instrument) {
-            const sound = new Audio(`${instrument.notesPath}${note}.wav`);
+            const sound = new Audio(`${instrument.notesPath}${note.replace('#', '%23')}.wav`);
             sound.play();
         }
         
@@ -73,5 +75,10 @@
         }
 
     </script>
+    </div>
+    </div>
+    <div class="info">
+        <a href="https://github.com/Scorpoll23/resume/tree/main">Look at my resume!</a>
+    </div>
 </body>
 </html>
